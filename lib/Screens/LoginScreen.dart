@@ -15,6 +15,9 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(flex: 2),
+              
+              // --- LOGO MELHORADO ---
+              // Usamos um Container com Stack para sobrepor o T com um ícone de chat
               Container(
                 width: 120,
                 height: 120,
@@ -26,17 +29,28 @@ class LoginScreen extends StatelessWidget {
                     end: Alignment.bottomRight,
                   ),
                 ),
-                child: const Center(
-                  child: Text(
-                    "T",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 60,
-                      fontWeight: FontWeight.bold,
+                child: Stack(
+                  children: [
+                    const Center(
+                      child: Text(
+                        "T",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 60,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      right: 25,
+                      bottom: 30,
+                      child: Icon(Icons.chat_bubble, color: Colors.white.withOpacity(0.9), size: 28),
+                    ),
+                  ],
                 ),
               ),
+              // -----------------------
+
               const SizedBox(height: 24),
               const Text(
                 "Talk",
@@ -52,6 +66,7 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.grey[600]),
               ),
               const Spacer(),
+              
               _buildButton(
                 text: "Entrar com Telefone",
                 icon: Icons.phone_android,
@@ -63,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
+              
               _buildButton(
                 text: "Entrar com Email",
                 icon: Icons.email_outlined,
@@ -111,6 +127,7 @@ class LoginScreen extends StatelessWidget {
           style: TextStyle(
             color: isOutlined ? color : Colors.white,
             fontSize: 16,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
