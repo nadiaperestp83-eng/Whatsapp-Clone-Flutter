@@ -42,6 +42,8 @@ jobs:
         env:
           FLUTTER_BUILD_DISABLE_GRADLE_UPDATE: "true"
         run: |
+          # Bloqueia a escrita no arquivo para impedir o "Upgrading" automático do Flutter
+          chmod -w android/build.gradle
           flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK
