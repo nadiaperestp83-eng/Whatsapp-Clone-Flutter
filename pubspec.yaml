@@ -19,7 +19,7 @@ dependencies:
   # Env / Secrets
   flutter_dotenv: ^5.1.0
 
-  # Auth SMSDev (requisições HTTP)
+  # Auth SMSDev
   http: ^1.2.1
 
   # Database + Realtime
@@ -43,11 +43,13 @@ dependencies:
   # Notificações
   flutter_local_notifications: ^17.1.2
 
+  # Contatos
+  flutter_contacts: ^1.1.9+2
+
   # Utilitários
   intl: ^0.19.0
   uuid: ^4.4.0
   permission_handler: ^11.3.1
-  contacts_service: ^0.6.3
   timeago: ^3.6.1
 
 dev_dependencies:
